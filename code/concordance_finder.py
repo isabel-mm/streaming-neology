@@ -25,7 +25,8 @@ def buscar_concordancias(corpus_file, termino_buscar):
 # Función para guardar los resultados en un archivo CSV
 def guardar_resultados_csv(concordancias, termino):
     nombre_archivo = f"concordancias_{termino.replace(' ', '_')}.csv"
-    with open(nombre_archivo, mode='w', encoding='utf-8', newline='') as archivo_salida:
+    # Usar 'utf-8-sig' para manejar mejor los caracteres especiales y asegurarse de que Excel los lea correctamente
+    with open(nombre_archivo, mode='w', encoding='utf-8-sig', newline='') as archivo_salida:
         escritor = csv.writer(archivo_salida, delimiter=';')
         # Escribir encabezado
         escritor.writerow(['Línea', 'Tweet'])
