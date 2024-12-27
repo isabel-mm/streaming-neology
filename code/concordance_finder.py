@@ -22,24 +22,48 @@ def buscar_concordancias(corpus_file, termino_buscar):
     
     return concordancias
 
+# Función para guardar los resultados en un archivo CSV
+def guardar_resultados_csv(concordancias, termino):
+    nombre_archivo = f"concordancias_{termino.replace(' ', '_')}.csv"
+    with open(nombre_archivo, mode='w', encoding='utf-8', newline='') as archivo_salida:
+        escritor = csv.writer(archivo_salida, delimiter=';')
+        # Escribir encabezado
+        escritor.writerow(['Línea', 'Tweet'])
+        # Escribir las concordancias
+        for idx, tweet in concordancias:
+            escritor.writerow([idx, tweet])
+    print(f"\nLos resultados se han guardado en '{nombre_archivo}'.")
+
 # Función principal
 def main():
     # Nombre del archivo CSV
     archivo_csv = 'corpus_twitter.csv'
     
-    # Pedir al usuario un palabra o frase para buscar
-    termino = input("Introduce la palabra o frase que deseas buscar: ").strip()
-    
-    # Buscar las concordancias
-    concordancias = buscar_concordancias(archivo_csv, termino)
-    
-    # Mostrar resultados
-    if concordancias:
-        print(f"\nSe han encontrado {len(concordancias)} concordancias con '{termino}':\n")
-        for idx, tweet in concordancias:
-            print(f"Línea {idx}: {tweet}\n")
-    else:
-        print(f"No se encontraron concordancias para '{termino}'.")
+    while True:
+        # Pedir al usuario una palabra o frase para buscar
+        termino = input("Introduce la palabra o neologismo que quieras buscar: ").strip()
+        
+        # Buscar las concordancias
+        concordancias = buscar_concordancias(archivo_csv, termino)
+        
+        # Mostrar resultados
+        if concordancias:
+            print(f"\nSe han encontrado {len(concordancias)} concordancias con '{termino}':\n")
+            for idx, tweet in concordancias:
+                print(f"Línea {idx}: {tweet}\n")
+        else:
+            print(f"No se encontraron concordancias para '{termino}'.")
+        
+        # Preguntar si desea guardar los resultados en un archivo CSV
+        guardar = input("\n¿Quieres guardar los resultados en un archivo CSV? (s/n): ").strip().lower()
+        if guardar == 's':
+            guardar_resultados_csv(concordancias, termino)
+        
+        # Preguntar si desea realizar otra búsqueda
+        otra_busqueda = input("\n¿Quieres realizar otra búsqueda? (s/n): ").strip().lower()
+        if otra_busqueda != 's':
+            print("¡Hasta luego! :-)")
+            break
 
 # Ejecutar el script
 if __name__ == "__main__":
