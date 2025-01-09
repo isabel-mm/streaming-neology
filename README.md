@@ -1,11 +1,11 @@
 # Neologismos en Corpus de Tweets 🐦📚
 
-Este repositorio contiene un corpus de tweets y herramientas para procesarlo y extraer neologismos.
+Este repositorio contiene un corpus de tweets y herramientas para procesarlo y extraer neologismos. Este repositorio incluye los materiales utilizados para el trabajo **Moyano Moreno, I. (en prensa). Extracción de neologismos en Twitter/X: El léxico emergente de la comunidad hispanohablante de streaming.**
 
 ## Contenido del Repositorio 📂
 
-- **Código de Procesamiento**: Scripts para procesar y analizar el corpus.
-- **`concordance_finder.py`**: Una herramienta para realizar búsquedas de concordancias y exportar los resultados en un archivo CSV.
+- **code**: Scripts para procesar y analizar el corpus.
+- **neologismos_validados**: Tabla completa con los neologismos validados e informaciones relevamtes.
 
 ## Funcionalidades 🚀
 
