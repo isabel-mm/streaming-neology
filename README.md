@@ -5,7 +5,7 @@ Este repositorio contiene un corpus de tweets y herramientas para procesarlo y e
 ## Contenido del Repositorio 📂
 
 - **code**: Scripts para procesar y analizar el corpus.
-- **neologismos_validados**: Tabla completa con los neologismos validados e informaciones relevamtes.
+- **neologismos_validados**: Tabla completa con los neologismos validados e informaciones relevantes.
 
 ## Funcionalidades 🚀
 
