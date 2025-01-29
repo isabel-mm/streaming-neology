@@ -1,6 +1,6 @@
 # Neologismos en Corpus de Tweets 🐦📚
 
-Este repositorio contiene un corpus de tweets y herramientas para procesarlo y extraer neologismos. Este repositorio incluye los materiales utilizados para el trabajo **Moyano Moreno, I. (en prensa). Extracción de neologismos en Twitter/X: El léxico emergente de la comunidad hispanohablante de streaming.**
+Este repositorio contiene las herramientas para extraer neologismos a partir de un corpus de tweets. Este repositorio incluye los materiales utilizados para el trabajo **Moyano Moreno, I. (en prensa). Extracción de neologismos en Twitter/X: El léxico emergente de la comunidad hispanohablante de streaming.**
 
 ## Contenido del Repositorio 📂
 
